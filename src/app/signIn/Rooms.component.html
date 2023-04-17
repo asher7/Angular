@@ -1,0 +1,93 @@
+<div class="container-fluid bg-info">
+  <div class="row justify-content-center align-items-center min-vh-100">
+    <div class="col-md-6 col-lg-4">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title text-center mb-4">Room Booking</h1>
+          <form>
+            <div class="form-group">
+              <label for="customerName">Customer Name</label>
+              <input type="text" class="form-control mb-3" id="customerName" placeholder="Enter Customer Name" required>
+            </div>
+            <div class="form-group">
+              <label for="customerGender">Customer Gender</label>
+              <input type="text" class="form-control mb-3" id="customerGender" placeholder="Enter Customer Gender" required>
+            </div>
+            <div class="form-group">
+              <label for="customerPhoneNo">Phone Number</label>
+              <input type="tel" class="form-control mb-3" id="customerPhoneNo" placeholder="Enter phoneNumber" required>
+            </div>
+            <div class="form-group">
+              <label for="customerLocality">customer Locality</label>
+              <input type="text" class="form-control mb-3" id="customerLocality" placeholder="Enter Location" required>
+            </div>
+            <div class="form-group">
+              <label for="customerState">Customer State</label>
+              <input type="text" class="form-control mb-3" id="customerState" placeholder="Enter State" required>
+            </div>
+            <div class="form-group">
+              <label for="customerCountry">Customer Country</label>
+              <input type="text" class="form-control mb-3" id="customerCountry" placeholder="Enter Country" required>
+            </div>
+            <div class="form-group">
+              <label for="customerAadharNo">Aadhar Number</label>
+              <input type="number" class="form-control mb-3" id="customerAadharNo" placeholder="Enter Aadhar number" required>
+            </div>
+            <div class="form-group">
+              <label for="totalMembers"> Total Members</label>
+              <input type="number" class="form-control mb-3" id="totalMembers" placeholder="Enter Number of persons" required>
+            </div>
+            <div class="form-group">
+              <label for="purpose"> Purpose of visit </label>
+              <input type="text" class="form-control mb-3" id="purpose" placeholder=" Purpose of visit" required>
+            </div>
+
+<!-- booking details-->
+            <div class="form-group">
+              <label for="checkInTime"> Check In Time</label>
+              <input type="datetime-local" class="form-control mb-3" id="checkInTime" placeholder="Enter the check in time of the customer" required>
+            </div>
+            <div class="form-group">
+              <label for="checkOutTime"> Check Out Time</label>
+              <input type="datetime-local" class="form-control mb-3" id="checkOutTime" placeholder="Enter the check out time of the customer" required>
+            </div>
+            <div class="form-group">
+              <label for="totalAmount"> Total Amount</label>
+              <input type="number" class="form-control mb-3" id="totalAmount" placeholder=" Total Amount">
+            </div>
+            
+              <div class="form-group">
+                <label for="advanceAmount"> Advance Amount</label>
+                <input type="number" class="form-control mb-3" id="advanceAmount" placeholder="Enter Advance Amount">
+              </div>
+              <div class="form-group">
+              <label for="dueAmount"> Due Amount</label>
+              <input type="number" class="form-control mb-3" id="dueAmount" placeholder="Due Amount">
+            </div>
+            <!-- <div class="form-group">
+              <label for="roomNo">Room No</label>
+              <select class="form-control mb-3" id="roomNo" >
+                <option value="">Select Room No</option>
+                <option *ngFor="let roomNo of roomNos" [value]="roomNo">{{roomNo}}</option>
+              </select>
+            </div> -->
+            <div class="form-group">
+              <label for="roomRent">Room Rent</label>
+              <input type="number" class="form-control mb-3" id="roomRent" [(ngModel)]="rents.roomRent" [ngModelOptions]="{standalone: true}" readonly>
+            </div>
+           
+
+            <div class="form-group">
+            <label for="roomType">Room Type</label>
+            <input type="text" class="form-control mb-3" id="roomType" [(ngModel)]="roomType.roomType" [ngModelOptions]="{standalone: true}" readonly>
+            </div>
+
+
+            <button class="btn btn-primary btn-block" >Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  

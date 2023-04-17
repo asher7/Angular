@@ -1,0 +1,91 @@
+.mat-toolbar-row, .mat-toolbar-single-row {
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 16px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    background-color: royalblue;
+    justify-content: space-between;
+}
+.example-spacer {
+    flex: 1 1 auto;
+    
+  }
+  .mat-sidenav {
+  width: 300px;
+}
+
+  .mat-drawer-container {
+    background-color: #1771db2e;
+    color: #fff;
+    width: 100px;
+  }
+  .mat-drawer {
+    background-color: #0f52d0bf;
+    color: #fff;
+  }
+  .mat-icon {
+    margin: 10px;
+    user-select: none;
+    background-repeat: no-repeat;
+    display: inline-block;
+    fill: currentColor;
+    height: 24px;
+    width: 24px;
+}
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    height: 25px;
+}
+
+.menu-buttons {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-start; /* align buttons to the left */
+}
+
+.menu-button {
+    margin-right: 16px;
+    padding: 12px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-button:hover {
+    background-color: #efefef;
+    /* Add a different background color on hover */
+    color: #2b8ab2;
+    /* Add a different text color on hover */
+}
+
+.hotel-name {
+    margin-left: auto; /* float to the right */
+}
+
+.btn {
+    position: absolute;
+    top: 150px;
+    right: 30px; /* float to the right */
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #184868;
+    border-color: #007bff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: azure;
+}

@@ -1,0 +1,30 @@
+/* form.component.css */
+.form-row .form-group {
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 13px;
+    width: 30%;
+  }
+  label{
+    margin: 3px;
+  }
+  
+  @media (max-width: 575px) {
+    .form-row .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  hr:not([size]).hr {
+    --mdb-divider-height: 1px;
+    --mdb-divider-bg: #757575;
+  }
+ 
+
+  .main-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+  }

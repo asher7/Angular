@@ -1,0 +1,96 @@
+<!-- form.component.html -->
+<div class="main-form">
+  <form #myForm="ngForm" (ngSubmit)="submitDetails(myForm)">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="customerName">customerName</label>
+        <input type="text" class="form-control" name="customerName"  [(ngModel)]="booking!.customer!.customerName" [ngModelOptions]="{standalone: true}" >
+      </div>
+      <div class="form-group">
+        <label for="customerGender">customerGender</label>
+        <input type="text" class="form-control" name="customerGender" [(ngModel)]="booking!.customer!.customerGender" >
+      </div>
+      
+
+
+      <div class="form-group">
+        <label for="customerPhoneNo">customerPhoneNo</label>
+        <input type="tel" class="form-control" name="customerPhoneNo" [(ngModel)]="booking!.customer!.customerPhoneNo">
+      </div>
+
+      <div class="form-group">
+        <label for="customerLocality"> customerLocality</label> 
+        <input type="text" class="form-control" name="customerLocality" placeholder="Locality"[(ngModel)]="booking!.customer!.customerLocality">
+      </div>
+
+
+      <div class="form-group">
+        <label for="customerState">customerState</label>
+        <input type="text" class="form-control" name="customerState" [(ngModel)]="booking!.customer!.customerState">
+      </div>
+
+      <div class="form-group">
+        <label for="customerCountry">customerCountry</label>
+        <input type="text" class="form-control" name="customerCountry" [(ngModel)]="booking!.customer!.customerCountry">
+      </div>
+      <div class="form-group">
+        <label for="customerAadharNo">customerAadharNo</label>
+        <input type="number" class="form-control" name="customerAadharNo" [(ngModel)]="booking!.customer!.customerAadharNo" required>
+      </div>
+      <div class="form-group">
+        <label for="totalMembers">Total members</label>
+        <input type="text" class="form-control" name="totalMembers" [(ngModel)]="booking!.customer!.totalMembers">
+      </div>
+
+      <div class="form-group">
+        <label for="purpose">Purpose</label>
+        <input type="text" class="form-control" name="purpose" [(ngModel)]="booking!.customer!.purpose">
+      </div>
+      <hr class="hr" />
+    </div>
+   <div class="form-row">
+      <div class="form-group">
+        <label for="checkInTime">checkInTime</label>
+        <input type="date" class="form-control" name="checkInTime"  [(ngModel)]="booking.checkInTime">
+      </div>
+    
+
+      <div class="form-group">
+        <label for="checkOutTime">checkOutTime</label>
+        <input type="date" class="form-control" name="checkOutTime "  [(ngModel)]="booking.checkOutTime">
+      </div>
+
+      <!-- <div class="form-group">
+        <label for="totalAmount">Total Amount</label>
+        <input type="text" class="form-control" name="totalAmount " [(ngModel)]="booking.totalAmount">
+      </div> -->
+
+      <div class="form-group">
+        <label for="advanceAmount">Advance Amount</label>
+        <input type="number" class="form-control" name="advanceAmount "[(ngModel)]="booking.advanceAmount" >
+      </div>
+
+      <div class="form-group">
+        <label for="dueAmount">Due Amount</label>
+        <input type="number" class="form-control" name="dueAmount " [(ngModel)]="booking.dueAmount">
+      </div>
+
+      <div class="form-group">
+        <label for="roomNo"> RoomNo</label>
+        <input type="number" class="form-control" name="roomNo " [(ngModel)]="booking!.roomDetails!.roomNo">
+      </div>
+
+      <div class="form-group">
+        <label for="roomRent"> Room Rent</label>
+        <input type="number" class="form-control" name="roomRent " [(ngModel)]="booking!.roomDetails!.rent!.roomRent">
+      </div>
+
+      <div class="form-group">
+        <label for="roomType"> Room Type</label>
+        <input type="text" class="form-control" name="roomType " [(ngModel)]="booking!.roomDetails!.rent!.roomType!.roomType">
+      </div>
+
+    </div>
+    <button style="margin: 20px 200px 0px 500px;" type="submit" class="btn btn-primary" (click)="goBack(myForm)">Sign in</button>
+  </form>
+</div>

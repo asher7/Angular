@@ -1,0 +1,79 @@
+<mat-toolbar color="info">
+  <mat-toolbar-row>
+    <button mat-icon-button><mat-icon (click)="sidenav.toggle();">menu</mat-icon></button>
+    <span>Hotel Name</span>
+  <span class="example-spacer"></span>
+  
+      
+      <!-- <ul class="menu-buttons">
+        <li class="menu-button">Home</li>
+        <li class="menu-button" routerLink="/rooms">Rooms</li>
+        <li class="menu-button">Billing</li>
+        <li class="menu-button">About</li>
+      </ul> -->
+      <mat-icon class="material-icons">home</mat-icon>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example payment icon">payment</mat-icon>
+      <mat-icon>info</mat-icon>
+  </mat-toolbar-row>
+  
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav opened="true" mode="side" class="my-custom-sidenav">
+    <mat-nav-list>
+      <a mat-list-item>Bookings</a>
+      <a mat-list-item>Customers</a>
+      <a mat-list-item>Reports</a>
+      <a mat-list-item>Contact us</a>
+      <a mat-list-item>Help</a>
+    </mat-nav-list>
+  </mat-sidenav>
+<mat-sidenav-content>
+  <div style="height: 85vh;"></div>
+  
+  
+</mat-sidenav-content>
+</mat-sidenav-container>
+
+<div class="roomtype" *ngIf="hideRoomType">
+  <!-- HTML -->
+<div class="branch-header">
+  <h2 style="color: black;"> Welcome to {{rent.branch?.branchName}} </h2>
+  <span style="display: inline-block; margin-right: 5px;">From: </span>
+  <input id="inputdate" (change)="getRoomsStatusOnDateChange()" style="display: inline-block;" type="date" [(ngModel)]="fromDate">
+  <span style="display: inline-block; margin-right: 5px;">To: </span>
+  <input id="inputdate" (change)="getRoomsStatusOnDateChange()" style="display: inline-block;" type="date" [(ngModel)]="toDate">
+</div>
+
+ 
+  <div class="roomtype" *ngIf="hideRoomType">
+    <div *ngFor="let room of statusCount|keyvalue"  class="room-type-item"><!-- (click)="bookRoom() -->"
+      <div class="room-type-header">
+        <mat-icon>hotel</mat-icon> <!-- Add icon for "Rooms" -->
+        {{ room.key  }}
+        <!-- {{getValue(room.key)}} -->
+      </div>
+      
+        <div *ngFor="let item of room.value | keyvalue let i=index">
+          <div *ngIf="i==0 || i==1" class="room-type-info">
+            <mat-icon *ngIf="i==0">check_circle</mat-icon> <!-- Add icon for "Available" -->
+            <mat-icon *ngIf="i==1">cancel</mat-icon>
+            {{item.key}}:{{item.value}}
+          </div>
+          
+        </div>
+        <button class="book-button" (click)="bookRoom()">Book</button>
+     </div>
+    </div>
+  </div> 
+
+<div class="roomtype" *ngIf="!hideRoomType">
+  <app-booking-form (showRoomType)="showRoomType()"></app-booking-form>
+</div>
+<footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-dark" href="https://mdbootstrap.com/">Hotel.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>

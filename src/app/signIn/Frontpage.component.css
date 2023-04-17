@@ -1,0 +1,220 @@
+.mat-toolbar-row, .mat-toolbar-single-row {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 16px;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  background-color: royalblue;
+  justify-content: space-between;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+
+
+.mat-drawer-container {
+  background-color: #1771db2e;
+  color: #fff;
+  width: 180px;
+  
+}
+
+.mat-drawer {
+  background-color: #0f52d0bf;
+  color: #fff;
+}
+
+.mat-icon {
+  margin: 8px;
+  user-select: none;
+  background-repeat: no-repeat;
+  display: inline-block;
+  fill: currentColor;
+  height: 20px;
+  width: 24px;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  height: 25px;
+}
+
+.menu-buttons {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-start; /* align buttons to the left */
+}
+
+.menu-button {
+  margin-right: 16px;
+  padding: 12px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-button:hover {
+  background-color: #efefef;
+  /* Add a different background color on hover */
+  color: #2b8ab2;
+  /* Add a different text color on hover */
+}
+
+.hotel-name {
+  margin-left: auto; /* float to the right */
+}
+
+.btn {
+  position: absolute;
+  top: 150px;
+  right: 30px; /* float to the right */
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #184868;
+  border-color: #007bff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: azure;
+}
+
+.book-button {
+  background-color: rgb(13, 176, 81);
+  color: #ffffff; /* Add text color */
+  padding: 12px 20px; /* Add padding for spacing */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* Add font size */
+  font-weight: bold; /* Add font weight */
+  transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+.book-button:hover {
+  background-color: rgb(8, 123, 57); /* Change background color on hover */
+}
+
+.room-type-item {
+  /* Set width to 50% of parent container minus margin */
+  height: 230px;
+  border: 2px solid #303030;
+  border-radius: 5px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  background-color: rgba(132, 221, 240, 0.7);
+  margin-bottom: 16px;
+  background-color: #ffffff;
+  padding: 16px;
+  width: 220px;
+}
+
+/* .room-type-item:nth-child(2n+1) {
+  margin-right: 0; } */
+
+.room-type-header {
+  font-size: 17px;
+  color: rgb(6, 6, 6);
+  font-weight: 1000;
+}
+
+.room-type-info {
+  color: rgb(10, 11, 11);
+  margin: 12px;
+  font-weight: 500;
+  display: flex; /* Add this to display icons in the same line */
+  align-items: center; /* Add this for vertical alignment */
+  margin-bottom: 8px; /* Add margin bottom for spacing */
+}
+
+
+
+.room-type-info mat-icon {
+  margin-right: 8px; /* Add margin right for spacing between icon and text */
+}
+.book-button {
+  background-color: rgb(3, 89, 39);
+}
+
+.roomtype {
+   display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  position: absolute;
+  
+  
+  flex-grow: 1;
+  padding: 10px;
+  left: 155px;
+  top: 100px; 
+}
+
+.mat-sidenav-container {
+  display: flex;
+}
+
+.mat-sidenav {
+  width: 200px; /* adjust width as needed */
+  background-color: #4f53d6; /* set background color as needed */
+}
+
+
+ .mat-nav-list {
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  height: inherit; */
+  padding: 0px 10px;
+  margin: 20px 10px 30px 20px;
+}
+    
+.roomtype >div{
+  padding: 20px;
+  /* margin: 200px 40px  200px 26px; */
+}
+
+.branch-header {
+  color: #e50909;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 235%;
+  left: 100px;
+  transform: translate(55%,-50%);
+}
+input[type="date"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.branch-header span {
+  margin-right: 5px;
+}
+/* Apply styles to the "From" and "To" labels */
+span {
+  margin-right: 5px;
+}
+h2{
+  position: absolute;
+  top: -20px;
+}
